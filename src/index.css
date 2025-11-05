@@ -1,0 +1,348 @@
+:root {
+    --theme-color-body-bg: hsl(218,14%,11%);
+    --theme-color-window-bg: hsl(223,11%,12%);
+    --theme-color-input-bg: 	hsl(223,7%,19%);
+
+    --theme-color-dark-button: hsl(214, 15%, 9%);
+    --theme-color-medium-button: hsl(223,7%,14%);
+
+    --theme-color-light: hsl(223, 11%, 60%);
+
+    --main-theme: hsl(198,99%,44%);
+
+    --border: 2px solid var(--theme-color-input-bg);
+}
+
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+html, body {
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--theme-color-body-bg);
+}
+
+button, h1, input, h2, table {
+    all: unset;
+}
+
+#root {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+/* ASIDE */
+
+.aside {
+    width: 60px;
+    background-color: var(--theme-color-window-bg);
+    border-right: var(--border);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.aside__nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.aside__nav-buttons {
+    color: white;
+    background-color: var(--theme-color-medium-button);
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.aside__legal-notices {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 250px;
+    transform: rotate(-90deg) translateX(150px);
+}
+
+.aside__legal-notices small {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    color: var(--theme-color-light)
+}
+
+/* MAIN */
+.main {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 20px;
+}
+
+.main__header {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.main__header-title {
+    font-size: 35px;
+    color: white;
+    display: block;
+    align-content: center;
+}
+
+.main__header-input-container {
+    display: flex;
+    align-items: center;
+}
+
+.main__header-input-container :first-child {
+    color: var(--theme-color-light);
+    transform: translateX(25px);
+}
+
+.main__header-input {
+    background-color: var(--theme-color-input-bg);
+    border-radius: 5px;
+    font-size: 14px;
+    height: 40px;
+    width: 250px;
+    color: white;
+    padding-left: 35px;
+}
+
+.main__header-input::placeholder {
+    color: var(--theme-color-light)
+}
+
+.main__header-buttons-container {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-left: auto;
+}
+
+.main__header-json-btn {
+    color: var(--theme-color-light);
+    height: 30px;
+    cursor: pointer;
+   
+}
+
+.main__header-add-btn {
+    display: block;
+    text-align: center;
+    color: white;
+    background-color: var(--main-theme);
+    border-radius: 500px;
+    width: 150px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.main__content {
+    flex: 1;
+    padding: 20px;
+}
+
+/* MAIN - PROJECTS PAGE */
+
+.projects-list {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+
+}
+
+.project-card {
+    background-color: var(--theme-color-medium-button);
+    width: 300px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    cursor: pointer;
+}
+
+.project-card__header {
+    height: 70px;
+    border-bottom: var(--border);
+    display: flex;
+    padding-bottom: 10px;
+    gap: 20px;
+
+}
+
+.project-card__acronym {
+    display: block;
+    text-align: center;
+    align-content: center;
+    background-color: orange;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+}
+
+.project-card__title-and-description {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    color: white;
+    gap: 2px;
+}
+
+.project-title {
+    font-size: 16px;
+}
+
+.project-description {
+    font-size: 10px;
+    font-weight: 200;
+
+}
+
+.project-card__informations {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+}
+
+.project-card__information{
+    flex: 0.25;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+}
+
+.project-card__information p:first-child {
+    color: var(--theme-color-light);
+    font-weight: 300;
+    font-size: 12px;
+}
+
+.project-card__information p:nth-child(2) {
+    color: white;
+    font-weight: 300;
+    font-size: 12px;
+}
+
+/* MAIN - USERS PAGE */
+
+.users-list {
+    color: white;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap : 25px;
+    justify-content: space-between;
+    padding: 50px 150px;
+}
+
+.users-list__users-table {
+
+}
+
+.users-list__users-table .header-line,
+.users-list__users-table .user-line {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr 1fr 1.3fr 1fr 1fr;
+    align-items: center;
+    padding-left: 15px;
+}
+
+.users-list__users-table .user-line {
+    height: 50px;
+    background: var(--theme-color-input-bg);
+    margin: 3px 0;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+.users-list__users-table .user-line div:last-child {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 20px;
+}
+
+.users-list__users-table .header-line {
+    height: 30px;
+    background-color: var(--theme-color-medium-button);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.users-list__users-table th,
+.users-list__users-table td {
+  text-align: left;
+  vertical-align: middle;
+  padding: 8px;
+  word-break: break-word;
+}
+
+.status-btn {
+    width: 80px;
+    height: 25px;
+    display: block;
+    text-align: center;
+    align-content: center;
+    border-radius: 10px;
+    font-size: 14px;    
+    color: var(--theme-color-input-bg);
+}
+
+.status-btn--pending {
+    background-color: hsla(60, 58%, 64%, 0.5);
+    color: var(--theme-color-input-bg);
+}
+
+.status-btn--approved {
+    background-color: hsla(115, 66%, 83%, 0.432);
+    color: var(--theme-color-input-bg);
+}
+
+.users-list__navigation-container {
+    background: var(--theme-color-input-bg);
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 0 20px;
+
+}
+
+.users-list__navigation-container > .navigation-commands {
+    display: flex;
+    gap: 30px;
+}
+
+.users-list__navigation-container > .navigation-commands span,
+.users-list__navigation-container > .navigation-commands .icon {
+    cursor: pointer;
+}
+
+.users-list__navigation-container > .items {
+
+}
+
+
+
+
+
+
