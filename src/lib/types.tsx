@@ -1,1 +1,1 @@
-export type TPage = "projects" | "users"
+export type TPage = "projects" | "users" | "user-details" | "project-details" | "viewer" | "ids" | "bcf" 

@@ -1,4 +1,5 @@
 import type { TPage } from "../lib/types";
+import ProjectDetails from "./ProjectDetails";
 import ProjectsList from "./ProjectsList";
 import UsersList from "./UsersList";
 
@@ -13,7 +14,9 @@ export default function Content({ page }: ContentProps) {
         contentType = <ProjectsList />
     } else if (page === "users") {
         contentType = <UsersList />
-    };
+    } else if (page === "project-details") {
+        contentType = <ProjectDetails />
+    }
 
     return (
         <div className="main__content">

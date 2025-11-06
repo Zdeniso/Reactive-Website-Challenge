@@ -12,6 +12,8 @@ export default function Header({ page }: HeaderProps) {
         pageTitle = "Projects"
     } else if (page === "users") {
         pageTitle = "Users"
+    } else if (page === "project-details") {
+        pageTitle = "Project Details"
     };
 
 
